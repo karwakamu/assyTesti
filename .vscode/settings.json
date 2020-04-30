@@ -1,0 +1,12 @@
+{
+    "asm-code-lens.enableCodeLenses": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/*.a": true,
+        "**/*.dll": true,
+        "**/*.dll.a": true
+    }
+}

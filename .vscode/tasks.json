@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "link",
+            "type": "shell",
+            //"command": "gcc -g -o hello.exe hello.obj -L kernel32.dll",
+            "command": "GoLink.exe /console /entry:WinMain kernel32.dll user32.dll hello.obj -fo hello.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn":["compile"]
+        },
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "nasm -f win32 -o hello.obj hello.asm",
+            "group": "build"
+        }
+    ]
+}
